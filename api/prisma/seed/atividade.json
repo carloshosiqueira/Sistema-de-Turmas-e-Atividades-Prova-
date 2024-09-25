@@ -1,0 +1,56 @@
+[
+    {
+        "idAtividade": 1,
+        "nome": "Introdução a lógica",
+        "turmaId": 1,
+        "matricula": 1
+    },
+    {
+        "idAtividade": 2,
+        "nome": "Introdução a lógica2 ",
+        "turmaId": 1,
+        "matricula": 1
+    },
+    {
+        "idAtividade": 3,
+        "nome": "Introdução a lógica 3",
+        "turmaId": 1,
+        "matricula": 1
+    },
+    {
+        "idAtividade": 4,
+        "nome": "Introdução logística",
+        "turmaId": 2,
+        "matricula": 2
+    },
+    {
+        "idAtividade": 5,
+        "nome": "Introdução logística 2",
+        "turmaId": 2,
+        "matricula": 2
+    },
+    {
+        "idAtividade": 6,
+        "nome": "Introdução logística 3",
+        "turmaId": 2,
+        "matricula": 2
+    },
+    {
+        "idAtividade": 7,
+        "nome": "Introdução a Análise de dados",
+        "turmaId": 3,
+        "matricula": 3
+    },
+    {
+        "idAtividade": 8,
+        "nome": "Introdução a Análise de dados 2",
+        "turmaId": 3,
+        "matricula": 3
+    },
+    {
+        "idAtividade": 9,
+        "nome": "Introdução a Análise de dados 3",
+        "turmaId": 3,
+        "matricula": 3
+    }
+]

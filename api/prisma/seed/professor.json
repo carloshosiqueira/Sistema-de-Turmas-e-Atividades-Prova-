@@ -1,0 +1,20 @@
+[
+    {
+        "matricula": 1,
+        "nome": "José Carlos",
+        "email": "jose@exemplo.com",
+        "senha": "1234"
+    },
+    {
+        "matricula": 2,
+        "nome": "Maria Alves",
+        "email": "maria@exemplo.com",
+        "senha": "5678"
+    },
+    {
+        "matricula": 3,
+        "nome": "Joana da Silva",
+        "email": "joana@exemplo.com",
+        "senha": "9012"
+    }
+]

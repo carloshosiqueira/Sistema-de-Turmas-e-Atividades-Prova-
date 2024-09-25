@@ -1,0 +1,104 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36 OPR/113.0.0.0" version="24.7.16">
+  <diagram name="Página-1" id="Lte5TSJdJ21iY-THbIvo">
+    <mxGraphModel dx="1393" dy="763" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="GiILA97zsKwdIhwRAPvq-1" value="Casos de Uso" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=30;" vertex="1" parent="1">
+          <mxGeometry x="309" y="50" width="210" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="GiILA97zsKwdIhwRAPvq-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="GiILA97zsKwdIhwRAPvq-2" target="GiILA97zsKwdIhwRAPvq-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GiILA97zsKwdIhwRAPvq-2" value="Professor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="110" y="400" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="GiILA97zsKwdIhwRAPvq-7" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="GiILA97zsKwdIhwRAPvq-4" target="GiILA97zsKwdIhwRAPvq-8">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="400" y="435" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GiILA97zsKwdIhwRAPvq-9" value="Include" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=1;entryDx=0;entryDy=0;dashed=1;dashPattern=8 8;" edge="1" parent="1" source="GiILA97zsKwdIhwRAPvq-4" target="GiILA97zsKwdIhwRAPvq-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GiILA97zsKwdIhwRAPvq-4" value="Cadastrar Turmas" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="180" y="395" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="GiILA97zsKwdIhwRAPvq-6" value="Fazer Login" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="290" y="300" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="GiILA97zsKwdIhwRAPvq-8" value="Fornecer nome da turma" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="395" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="GiILA97zsKwdIhwRAPvq-10" value="Professor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="110" y="920" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="GiILA97zsKwdIhwRAPvq-11" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="GiILA97zsKwdIhwRAPvq-13" target="GiILA97zsKwdIhwRAPvq-15">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="400" y="955" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GiILA97zsKwdIhwRAPvq-12" value="Include" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=1;entryDx=0;entryDy=0;dashed=1;dashPattern=8 8;" edge="1" parent="1" source="GiILA97zsKwdIhwRAPvq-13" target="GiILA97zsKwdIhwRAPvq-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GiILA97zsKwdIhwRAPvq-13" value="Atribuir Atividades" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="180" y="920" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="GiILA97zsKwdIhwRAPvq-14" value="Fazer Login" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="290" y="820" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="GiILA97zsKwdIhwRAPvq-15" value="Selecionar a turma" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="920" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="GiILA97zsKwdIhwRAPvq-17" value="Extends" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;dashed=1;dashPattern=8 8;" edge="1" parent="1" source="GiILA97zsKwdIhwRAPvq-16" target="GiILA97zsKwdIhwRAPvq-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GiILA97zsKwdIhwRAPvq-16" value="Cadastrar turma" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="500" y="820" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="GiILA97zsKwdIhwRAPvq-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="GiILA97zsKwdIhwRAPvq-18" target="GiILA97zsKwdIhwRAPvq-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GiILA97zsKwdIhwRAPvq-18" value="Professor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" vertex="1" parent="1">
+          <mxGeometry x="110" y="190" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="GiILA97zsKwdIhwRAPvq-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="GiILA97zsKwdIhwRAPvq-19" target="GiILA97zsKwdIhwRAPvq-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GiILA97zsKwdIhwRAPvq-19" value="Realizar login" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="190" y="185" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="GiILA97zsKwdIhwRAPvq-20" value="Fornecer email e senha" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="370" y="185" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="GiILA97zsKwdIhwRAPvq-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="GiILA97zsKwdIhwRAPvq-23" target="GiILA97zsKwdIhwRAPvq-26">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GiILA97zsKwdIhwRAPvq-23" value="Professor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="110" y="600" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="GiILA97zsKwdIhwRAPvq-25" value="Include" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=1;entryDx=0;entryDy=0;dashed=1;dashPattern=8 8;" edge="1" parent="1" source="GiILA97zsKwdIhwRAPvq-26" target="GiILA97zsKwdIhwRAPvq-27">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GiILA97zsKwdIhwRAPvq-26" value="Listar Turmas" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="180" y="595" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="GiILA97zsKwdIhwRAPvq-27" value="Fazer Login" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="274" y="480" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="GiILA97zsKwdIhwRAPvq-31" value="Extends" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;dashed=1;dashPattern=8 8;" edge="1" parent="1" source="GiILA97zsKwdIhwRAPvq-30" target="GiILA97zsKwdIhwRAPvq-26">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GiILA97zsKwdIhwRAPvq-30" value="Excluir turma" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="700" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="GiILA97zsKwdIhwRAPvq-33" value="Extends" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;dashed=1;dashPattern=8 8;" edge="1" parent="1" source="GiILA97zsKwdIhwRAPvq-32" target="GiILA97zsKwdIhwRAPvq-26">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GiILA97zsKwdIhwRAPvq-32" value="Exibir Atividades" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="430" y="595" width="140" height="70" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
