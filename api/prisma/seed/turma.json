@@ -1,16 +1,13 @@
 [
     {
-        "idTurma": 1,
         "nome": "Desenvolvimento de sistemas",
         "matricula": 1
     },
     {
-        "idTurma": 2,
         "nome": "Auxiliar de logística",
         "matricula": 2
     },
     {
-        "idTurma": 3,
         "nome": "Analisa de dados",
         "matricula": 3
     }

@@ -2,8 +2,8 @@ const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
 
 const professores = require('./seed/professor.json')
-const atividades = require('./seed/atividade.json')
 const turmas = require ('./seed/turma.json')
+const atividades = require('./seed/atividade.json')
 
 async function main() {
     for (const professor of professores) {
@@ -11,14 +11,14 @@ async function main() {
             data: professor
         });
     }
-    for (const atividade of atividades) {
-        await prisma.atividade.create({
-            data: atividade
-        });
-    }
     for (const turma of turmas) {
         await prisma.turma.create({
             data: turma
+        });
+    }
+    for (const atividade of atividades) {
+        await prisma.atividade.create({
+            data: atividade
         });
     }
 }

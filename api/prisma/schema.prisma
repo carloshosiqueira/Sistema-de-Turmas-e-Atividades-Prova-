@@ -27,8 +27,8 @@ model Turma {
 model Atividade {
   idAtividade Int @id @default(autoincrement())
   nome String
-  turmaId Int
+  idTurma Int
   matricula Int
   professor Professor @relation("Atribui", fields: [matricula], references: [matricula])
-  turma Turma @relation("Tem", fields: [turmaId], references: [idTurma])
+  turma Turma @relation("Tem", fields: [idTurma], references: [idTurma])
 }

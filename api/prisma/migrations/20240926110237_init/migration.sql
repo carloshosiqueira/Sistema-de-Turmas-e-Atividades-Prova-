@@ -22,7 +22,7 @@ CREATE TABLE `Turma` (
 CREATE TABLE `Atividade` (
     `idAtividade` INTEGER NOT NULL AUTO_INCREMENT,
     `nome` VARCHAR(191) NOT NULL,
-    `turmaId` INTEGER NOT NULL,
+    `idTurma` INTEGER NOT NULL,
     `matricula` INTEGER NOT NULL,
 
     PRIMARY KEY (`idAtividade`)
@@ -35,4 +35,4 @@ ALTER TABLE `Turma` ADD CONSTRAINT `Turma_matricula_fkey` FOREIGN KEY (`matricul
 ALTER TABLE `Atividade` ADD CONSTRAINT `Atividade_matricula_fkey` FOREIGN KEY (`matricula`) REFERENCES `Professor`(`matricula`) ON DELETE RESTRICT ON UPDATE CASCADE;
 
 -- AddForeignKey
-ALTER TABLE `Atividade` ADD CONSTRAINT `Atividade_turmaId_fkey` FOREIGN KEY (`turmaId`) REFERENCES `Turma`(`idTurma`) ON DELETE RESTRICT ON UPDATE CASCADE;
+ALTER TABLE `Atividade` ADD CONSTRAINT `Atividade_idTurma_fkey` FOREIGN KEY (`idTurma`) REFERENCES `Turma`(`idTurma`) ON DELETE RESTRICT ON UPDATE CASCADE;
