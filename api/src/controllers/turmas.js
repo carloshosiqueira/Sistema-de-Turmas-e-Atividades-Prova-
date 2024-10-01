@@ -5,7 +5,8 @@ const create = async (req, res) => {
     try {
         const turma = await prisma.turma.create({
             data: {
-                nome: req.body.nome
+                nome: req.body.nome,
+                matricula: req.body.matricula
             }
         });
         res.status(201).json(turma);
@@ -34,9 +35,7 @@ const update = async (req, res) => {
             where: {
                 idTurma: parseInt(req.params.idTurma)
             },
-            data: {
-                data: req.body
-            }
+            data: req.body
         })
         res.status(202).json(turma);
     } catch (error) {

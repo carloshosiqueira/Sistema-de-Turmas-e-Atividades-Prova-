@@ -43,7 +43,7 @@ const update = async (req, res) => {
         });
         res.status(202).json(professor);
     } catch (error) {
-        res.status(400).json({message: "Professor não encontrado" + error.message})
+        res.status(404).json({message: "Professor não encontrado" + error.message})
     }
 }
 

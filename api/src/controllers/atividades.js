@@ -6,6 +6,8 @@ const create = async (req, res) => {
         const atividade = await prisma.atividade.create({
             data: {
                 nome: req.body.nome,
+                idTurma: req.body.idTurma,
+                matricula: req.body.matricula
             }
         });
         res.status(201).json(atividade);
@@ -34,9 +36,7 @@ const update = async (req, res) => {
             where: {
                 idAtividade: parseInt(req.params.idAtividade)
             },
-            data: {
-                data: req.body
-            }
+            data: req.body
         })
         res.status(202).json(atividade);
     } catch (error) {
