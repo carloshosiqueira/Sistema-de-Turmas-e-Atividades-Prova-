@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Professor</title>
+    <link rel="stylesheet" href="../css/professor.css">
 </head>
+
 <body>
     <header>
-        <h2 id="profesor">PlaceHolder</h2>
+        <h2 id="professor"></h2>
         <button id="btnSair">Sair</button>
     </header>
     <main>
         <section class="turmas">
             <div class="cadastrarTurma">
-                <button class="btnCadastroTurma">Cadastrar Turma</button>
+                <button class="btnCadastroTurma" id="btnCadastroTurma">Cadastrar Turma</button>
             </div>
             <div class="Turmas">
                 <h3>Turmas</h3>
@@ -22,13 +25,57 @@
                         <tr>
                             <th>Número</th>
                             <th>Nome</th>
+                            <th>Ações</th>
                         </tr>
                     </thead>
-                    <tbody id="dadosAtividade">
+                    <tbody id="dadosTurma">
                     </tbody>
                 </table>
             </div>
         </section>
     </main>
+    <!-- Modal cadastrar turma -->
+    <div class="overlay-modal oculto" id="modalCadastroTurma">
+        <div class="modal">
+            <h2>Cadastrar Turma</h2>
+            <form id="formCadastroTurma">
+                <input type="text" name="nome" placeholder="Nome da turma" required>
+                <button type="submit">Cadastrar</button>
+            </form>
+            <button class="btnFecharModal">Fechar</button>
+        </div>
+    </div>
+    <!-- Modal de excluir turma -->
+    <div class="overlay-modal oculto" id="modalDeletarTurma">
+        <div class="modal">
+            <h2>Tem certeza que deseja excluir essa turma?</h2>
+            <button id="btnExcluirTurma">Excluir</button>
+            <button onclick="modalDeletarTurma.style.display='none'">Cancelar</button>
+        </div>
+    </div>
+    <!-- Modal tela de atividades -->
+    <div class="overlay-modal oculto" id="modalAtividadesTurma">
+        <div class="modal">
+            <button class="cadastrarAtividade" id="btnCadastrarAtividade">Cadastrar Atividade</button>
+            <!--Quando clicar nesse botão abrir outro modal para cadastrar-->
+            <div class="Turmas">
+                <h3>Turma: <span id="nomeDaSala"></span></h3>
+                <!--Pegar o nome da turma atraves do idDaTurma ao clicar no btao visualizar-->
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Número</th>
+                            <th>Nome</th>
+                        </tr>
+                    </thead>
+                    <tbody id="dadosAtividades">
+                    </tbody>
+                </table>
+            </div>
+            <button class="btnFecharModal">Fechar</button>
+        </div>
+    </div>
 </body>
+<script src="../js/professor.js"></script>
+
 </html>

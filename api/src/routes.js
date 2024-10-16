@@ -5,6 +5,8 @@ const Professor = require('./controllers/professor')
 const Atividade = require('./controllers/atividades')
 const Turma = require('./controllers/turmas')
 
+router.post('/login', Professor.login)
+
 router.get('/professor', Professor.read);
 router.get('/professor/:matricula', Professor.read);
 router.post('/professor', Professor.create);

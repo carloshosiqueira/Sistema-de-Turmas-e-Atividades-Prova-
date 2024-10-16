@@ -60,9 +60,26 @@ const del = async (req, res) => {
     }
 }
 
+//Login do professor
+    const login = async (req, res) => {
+        const { email, senha } = req.body;
+        const professor = await prisma.professor.findUnique({
+            where: {
+                email: email,
+                senha: senha
+            }
+        });
+        if (!professor) {
+            return res.status(401).json({ message: 'Credenciais inválidas' });
+        }
+        res.json(professor);
+    }
+
+    
 module.exports = {
     create,
     read,
     update,
     del,
+    login,
 }
