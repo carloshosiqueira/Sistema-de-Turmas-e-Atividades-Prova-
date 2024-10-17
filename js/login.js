@@ -18,9 +18,10 @@ formLogin.addEventListener("submit", async (e) => {
         window.location.href = './telaProfessor.html'
     } else {
         msgErro.textContent = "E-mail ou senha inválidos!";
-        msgErro.classList.remove('hidden');
+        msgErro.style.color = 'red'
+        msgErro.style.display = 'block';
         setTimeout(() => {
-            msgErro.classList.add('hidden');
+            msgErro.style.display = 'none';
         }, 3000);
     }
 });

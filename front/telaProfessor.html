@@ -42,7 +42,18 @@
                 <input type="text" name="nome" placeholder="Nome da turma" required>
                 <button type="submit">Cadastrar</button>
             </form>
-            <button class="btnFecharModal">Fechar</button>
+            <button class="btnFecharModal" id="btnFecharModalTurma">Fechar</button>
+        </div>
+    </div>
+    <!-- Modal de cadastrar atividade -->
+    <div class="overlay-modal oculto" id="modalCadastroAtividade">
+        <div class="modal">
+            <h2>Cadastrar Atividade</h2>
+            <form id="formCadastroAtividade">
+                <input type="text" name="nome" placeholder="Nome da Atividade" required>
+                <button type="submit">Cadastrar</button>
+            </form>
+            <button class="btnFecharModal" id="btnFecharModalCadastroAtividades">Fechar</button>
         </div>
     </div>
     <!-- Modal de excluir turma -->
@@ -55,12 +66,11 @@
     </div>
     <!-- Modal tela de atividades -->
     <div class="overlay-modal oculto" id="modalAtividadesTurma">
-        <div class="modal">
-            <button class="cadastrarAtividade" id="btnCadastrarAtividade">Cadastrar Atividade</button>
+        <div class="modalAtividade">
+            <button class="cadastrarAtividade" id="btnCadastroAtividade">Cadastrar Atividade</button>
             <!--Quando clicar nesse botão abrir outro modal para cadastrar-->
             <div class="Turmas">
                 <h3>Turma: <span id="nomeDaSala"></span></h3>
-                <!--Pegar o nome da turma atraves do idDaTurma ao clicar no btao visualizar-->
                 <table>
                     <thead>
                         <tr>
@@ -72,7 +82,7 @@
                     </tbody>
                 </table>
             </div>
-            <button class="btnFecharModal">Fechar</button>
+            <button class="btnFecharModal" id="btnFecharModalAtividade">Fechar</button>
         </div>
     </div>
 </body>

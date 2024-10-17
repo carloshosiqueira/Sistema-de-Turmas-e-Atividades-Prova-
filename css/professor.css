@@ -141,6 +141,44 @@ th {
     background-color: #0056b3;
 }
 
+.modalAtividade {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    height: 90%;
+    width: 90%; /* Faz com que ocupe a maior parte da largura possível */
+    position: relative; /* Para manter o modal no topo */
+    min-height: 200px; /* Altura mínima do modal */
+}
+
+.modalAtividade h2 {
+    margin-bottom: 20px;
+}
+
+.modalAtividade input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.modalAtividade button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin:5px
+}
+
+.modalAtividade button:hover {
+    background-color: #0056b3;
+}
+
 .oculto{
     display: none;
 }

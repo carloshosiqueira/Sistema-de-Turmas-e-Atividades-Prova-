@@ -14,6 +14,7 @@ router.put('/professor/:matricula', Professor.update);
 router.delete('/professor/:matricula', Professor.del);
 
 router.get('/atividade', Atividade.read);
+router.get('/atividadeTurma/:idTurma', Atividade.readAtividadesByIdTurma);
 router.get('/atividade/:idAtividade', Atividade.read);
 router.post('/atividade', Atividade.create);
 router.put('/atividade/:idAtividade', Atividade.update);

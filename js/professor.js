@@ -8,11 +8,13 @@ document.addEventListener('DOMContentLoaded', () => {
     getTurmasByProfessor()
 });
 const modalCadastroTurma = document.getElementById('modalCadastroTurma')
+const modalCadastroAtividade = document.getElementById('modalCadastroAtividade')
 const modalDeletarTurma = document.getElementById('modalDeletarTurma')
 const modalAtividadesTurma = document.getElementById('modalAtividadesTurma')
 
 //Formulário para cadastrar nova turma
 const formCadastroTurma = document.getElementById("formCadastroTurma")
+const formCadastroAtividade = document.getElementById("formCadastroAtividade")
 
 formCadastroTurma.addEventListener('submit', async (e) => {
     const professor = JSON.parse(localStorage.getItem('professor'))
@@ -42,8 +44,49 @@ formCadastroTurma.addEventListener('submit', async (e) => {
     }
 });
 
+formCadastroAtividade.addEventListener('submit', async (e) => {
+    const professor = JSON.parse(localStorage.getItem('professor'))
+    e.preventDefault();
+    const matricula = professor.matricula;
+    const nome = formCadastroAtividade.nome.value;
+    
+    //Pegando id da turma (tentando)
+    
+    const response = await fetch(`http://localhost:3000/turma`);
+    const turmas = await response.json();
+    let idTurma; // Declare `idTurma` aqui para que possa ser acessado depois
+    
+    turmas.forEach(turma => {
+        if (turma.matricula === matricula) {
+            idTurma = turma.idTurma; // Atribua o valor sem usar `const`
+        }
+    });
+    
+    try {
+        const response = await fetch('http://localhost:3000/atividade', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ nome, idTurma, matricula })
+        });
+
+        if (!response.ok) {
+            const errorData = await response.json();
+            throw new Error('Erro ao cadastrar turma: ' + errorData.message);
+        } else {
+            const turma = await response.json();
+            console.log('Turma cadastrada com sucesso:', turma);
+            window.location.reload()
+        }
+
+    } catch (e) {
+        console.error('Erro ao cadastrar turma:', e);
+    }
+});
+
 //Exibir turmas baseadas na matricula do professor na tabela
 const dadosTurma = document.getElementById('dadosTurma')
+const dadosAtividades = document.getElementById('dadosAtividades');
+
 
 async function getTurmasByProfessor() {
     const professor = JSON.parse(localStorage.getItem('professor'));
@@ -65,7 +108,7 @@ async function getTurmasByProfessor() {
                     <td>${turma.nome}</td>
                     <td>
                         <button onclick="abrirModalDeletar(${turma.idTurma})">Excluir</button>
-                        <button onclick="abrirModalAtividades(${turma.idTurma, turma.nome})">Visualizar</button>
+                        <button onclick="abrirModalAtividades(${turma.idTurma}); carregarTabelaAtividades(${turma.idTurma})">Visualizar</button>
                     </td>
                 `;
                 dadosTurma.appendChild(row);
@@ -87,6 +130,7 @@ async function deletarTurma(idTurma) {
             window.location.reload()
         }
     } catch (e) {
+        alert('Você não pode excluir uma turma com atividades cadastradas')
         console.error('Erro ao deletar turma:', e);
     }
 }
@@ -94,6 +138,10 @@ async function deletarTurma(idTurma) {
 //Abrir modal de cadastrar turma
 document.getElementById('btnCadastroTurma').addEventListener('click', () => {
     modalCadastroTurma.style.display = 'flex'; // Mostra o modal
+});
+document.getElementById('btnCadastroAtividade').addEventListener('click', (idTurma) => {
+    modalAtividadesTurma.style.display = 'none';
+    modalCadastroAtividade.style.display = 'flex'; // Mostra o modal
 });
 //Abrir modal de excluir turma
 function abrirModalDeletar(idTurma) {
@@ -106,12 +154,52 @@ function abrirModalDeletar(idTurma) {
 
 //Abrir modal de atividades
 
-function abrirModalAtividades(idTurma, nome) {
+async function abrirModalAtividades(idTurma) {
     modalAtividadesTurma.style.display = 'flex'
-    const nomeDaSala = document.getElementById("nomeDaSala")
-    nomeDaSala.textContent = nome
+    const response = await fetch(`http://localhost:3000/turma/${idTurma}`)
+    if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error('Erro ao buscar turma: ' + errorData.message);
+    } else {
+        const turma = await response.json();
+        document.getElementById('nomeDaSala').textContent = turma.nome
+    }
+};
 
+//Carregar tabela no modal de atividades
+
+async function carregarTabelaAtividades(idTurma){
+    const response = await fetch(`http://localhost:3000/atividadeTurma/${idTurma}`)
+    if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error('Erro ao buscar atividades: ' + errorData.message);
+    } else {
+        const atividades = await response.json();
+        dadosAtividades.innerHTML = ''; // Limpa a tabela antes de carregar novos dados
+        atividades.forEach(atividade => {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${atividade.idAtividade}</td>
+                <td>${atividade.nome}</td>
+                `
+                dadosAtividades.appendChild(row);
+        });
+    };
 }
+
+document.getElementById('btnFecharModalTurma').addEventListener('click', (e) => {
+    e.preventDefault()
+    modalCadastroTurma.style.display = 'none'; // Esconde o modal
+});
+
+document.getElementById('btnFecharModalAtividade').addEventListener('click', (e) => {
+    e.preventDefault()
+    modalAtividadesTurma.style.display = 'none'; // Esconde o modal
+});
+document.getElementById('btnFecharModalCadastroAtividades').addEventListener('click', (e) => {
+    e.preventDefault()
+    modalCadastroAtividade.style.display = 'none'; // Esconde o modal
+});
 
 // Sair 
 document.getElementById('btnSair').addEventListener('click', () => {

@@ -30,6 +30,15 @@ const read = async (req, res) => {
     }
 }
 
+const readAtividadesByIdTurma = async (req, res) => {
+    const atividades = await prisma.atividade.findMany({
+        where: {
+            idTurma: parseInt(req.params.idTurma)
+        }
+    });
+    return res.json(atividades);
+}
+
 const update = async (req, res) => {
     try {
         const atividade = await prisma.atividade.update({
@@ -60,6 +69,7 @@ const del = async (req, res) => {
 module.exports = {
     create,
     read,
+    readAtividadesByIdTurma,
     update,
     del,
 }
